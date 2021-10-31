@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/joyce/Desktop/book_final/must_have_android/05_LearningViews/app/src/main/res/layout/activity_main.xml" value="0.3260416666666667" />
+        <entry key="..\:/Users/joyce/Desktop/book_final/must_have_android/05_LearningViews/app/src/main/res/layout/asdf.xml" value="0.2712962962962963" />
+        <entry key="..\:/Users/joyce/Desktop/book_final/must_have_android/05_LearningViews/app/src/main/res/layout/sample_button.xml" value="0.15462962962962962" />
+        <entry key="..\:/Users/joyce/Desktop/book_final/must_have_android/05_LearningViews/app/src/main/res/layout/sample_edittext.xml" value="0.3260416666666667" />
+        <entry key="..\:/Users/joyce/Desktop/book_final/must_have_android/05_LearningViews/app/src/main/res/layout/sample_imageview.xml" value="0.2712962962962963" />
+        <entry key="..\:/Users/joyce/Desktop/book_final/must_have_android/05_LearningViews/app/src/main/res/layout/sample_textview.xml" value="0.2712962962962963" />
+        <entry key="..\:/Users/joyce/Desktop/book_final/must_have_android/05_LearningViews/app/src/main/res/layout/sample_textview_with_values.xml" value="0.2712962962962963" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
