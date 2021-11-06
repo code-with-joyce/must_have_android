@@ -73,8 +73,6 @@ class LocationProvider(val context: Context) {
                         locationManager?.getLastKnownLocation(LocationManager.GPS_PROVIDER)
                 }
 
-                Log.e("here","network Location : ${networkLocation} ${gpsLocation}")
-
                 if (gpsLocation != null && networkLocation != null) {
                     //만약 두 개 위치가 있다면 정확도 높은 것으로 선택합니다.
                     if (gpsLocation.accuracy > networkLocation.accuracy) {
@@ -94,8 +92,6 @@ class LocationProvider(val context: Context) {
                         location = networkLocation
                     }
                 }
-
-//                location = gpsLocation
 
             }
         } catch (e: Exception) {

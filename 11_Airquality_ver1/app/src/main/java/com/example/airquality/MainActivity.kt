@@ -55,9 +55,6 @@ class MainActivity : AppCompatActivity() {
         checkAllPermissions()
         updateUI()
         setRefreshButton()
-
-        Log.e("here ", "Hm")
-
     }
 
     private fun setRefreshButton() {
@@ -73,7 +70,6 @@ class MainActivity : AppCompatActivity() {
         val latitude: Double = locationProvider.getLocationLatitude()
         val longitude: Double = locationProvider.getLocationLongitude()
 
-        Log.e("here ", "${latitude} ${longitude}")
         if (latitude != 0.0 || longitude != 0.0) {
 
             //1. 현재 위치를 가져오고 UI 업데이트
