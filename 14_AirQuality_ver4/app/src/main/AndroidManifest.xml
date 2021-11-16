@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.airquality">
+    package="com.joycehong.airquality">
     <!--Internet Permission-->
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -19,17 +19,17 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyD9KbpBRLLtxcsGy8l-TLliuyxQU9CkNNo" />
+            android:value="[여러분의 API KEY]" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-6454769716136341~8414613500"/>
+            android:value="[여러분의 API KEY]"/>
 
-        <activity android:name=".MapActivity"
+        <activity android:name="com.joycehong.airquality.MapActivity"
             android:exported="true" />
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.joycehong.airquality.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
