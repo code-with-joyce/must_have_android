@@ -19,7 +19,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="여러분의 API KEY를 입력하세요." />
+            android:value="AIzaSyD9KbpBRLLtxcsGy8l-TLliuyxQU9CkNNo" />
         <activity android:name=".MapActivity"
             android:exported="true" />
 

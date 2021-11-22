@@ -19,11 +19,11 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="[여러분의 API KEY]" />
+            android:value="AIzaSyD9KbpBRLLtxcsGy8l-TLliuyxQU9CkNNo" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="[여러분의 API KEY]"/>
+            android:value="ca-app-pub-6454769716136341~8414613500"/>
 
         <activity android:name="com.joycehong.airquality.MapActivity"
             android:exported="true" />
