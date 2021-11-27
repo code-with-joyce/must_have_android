@@ -337,16 +337,16 @@ class MainActivity : AppCompatActivity() {
         if (requestCode == PERMISSIONS_REQUEST_CODE && grantResults.size == REQUIRED_PERMISSIONS.size) {
 
             // 요청 코드가 PERMISSIONS_REQUEST_CODE 이고, 요청한 퍼미션 개수만큼 수신되었다면
-            var check_result = true
+            var checkResult = true
 
             // 모든 퍼미션을 허용했는지 체크합니다.
             for (result in grantResults) {
                 if (result != PackageManager.PERMISSION_GRANTED) {
-                    check_result = false
+                    checkResult = false
                     break
                 }
             }
-            if (check_result) { //위치 값을 가져올 수 있음
+            if (checkResult) { //위치 값을 가져올 수 있음
             } else { //퍼미션이 거부되었다면 앱을 종료합니다.
                 Toast.makeText(
                     this@MainActivity, "퍼미션이 거부되었습니다. 앱을 다시 실행하여 퍼미션을 허용해주세요.", Toast.LENGTH_LONG
