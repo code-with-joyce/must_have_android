@@ -1,7 +1,7 @@
 package com.example.airquality.retrofit
 
 data class AirQualityResponse(
-    val `data`: Data,
+    val data: Data,
     val status: String
 ) {
     data class Data(

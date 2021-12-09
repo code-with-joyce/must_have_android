@@ -11,6 +11,7 @@ import android.location.LocationManager
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultCallback
@@ -93,10 +94,10 @@ class MainActivity : AppCompatActivity() {
     private fun setInterstitialAds(){
         val adRequest = AdRequest.Builder().build()
 
-        InterstitialAd.load(this,"ca-app-pub-3940256099942544/1033173712", adRequest, object : InterstitialAdLoadCallback() {
+        InterstitialAd.load(this,"ca-app-pub-6454769716136341/8207564092", adRequest, object : InterstitialAdLoadCallback() {
             override fun onAdFailedToLoad(adError: LoadAdError) {
                 Log.d("ads log", "전면 광고가 로드 실패했습니다. ${adError.responseInfo}")
-                mInterstitialAd = null
+                setTestInterstitialAds()
             }
 
             override fun onAdLoaded(interstitialAd: InterstitialAd) {
@@ -105,6 +106,26 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+
+    /**
+     * 만약 실제 광고 단위가 동작하지 않을 시에는 테스트 전면 광고를 보여줌.
+     * */
+    private fun setTestInterstitialAds(){
+        val adRequest = AdRequest.Builder().build()
+        InterstitialAd.load(this,"ca-app-pub-3940256099942544/1033173712", adRequest, object : InterstitialAdLoadCallback() {
+            override fun onAdFailedToLoad(adError: LoadAdError) {
+                Log.d("ads log", "테스트 전면 광고가 로드 실패했습니다. ${adError.responseInfo}")
+                mInterstitialAd = null
+            }
+
+            override fun onAdLoaded(interstitialAd: InterstitialAd) {
+                Log.d("ads log", "테스트 전면 광고가 로드되었습니다.")
+                mInterstitialAd = interstitialAd
+            }
+        })
+    }
+
+
 
 
     private fun setBannerAds(){
@@ -117,7 +138,8 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onAdFailedToLoad(adError : LoadAdError) {
-                Log.d("ads log","배너 광고가 로드 실패했습니다. ${adError.responseInfo}")
+                Log.d("ads log","배너 광고가 로드 실패했습니다. ${adError.responseInfo} ${adError.code}")
+                setTestBannerAds()
             }
 
             override fun onAdOpened() {
@@ -133,6 +155,42 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+    /**
+     * 만약 실제 광고 단위가 동작하지 않을 시에는 테스트 배너를 보여줌.
+     * */
+    private fun setTestBannerAds(){
+        //기존 배너는 숨김 처리. 테스트 배너는 보임 처리
+        binding.testAdView.visibility = View.VISIBLE
+        binding.adView.visibility = View.GONE
+
+        MobileAds.initialize(this);
+        val adRequest = AdRequest.Builder().build()
+        binding.testAdView.loadAd(adRequest)
+        binding.testAdView.adListener = object : AdListener() {
+            override fun onAdLoaded() {
+                Log.d("ads log","테스트 배너 광고가 로드되었습니다.")
+            }
+
+            override fun onAdFailedToLoad(adError : LoadAdError) {
+                Log.d("ads log","테스트 배너 광고가 로드 실패했습니다. ${adError.responseInfo} ${adError.code}")
+            }
+
+            override fun onAdOpened() {
+                Log.d("ads log","테스트 배너 광고를 열었습니다.") //전면에 광고가 오버레이 되었을 때
+            }
+
+            override fun onAdClicked() {
+                Log.d("ads log","테스트 배너 광고를 클릭했습니다.")
+            }
+
+            override fun onAdClosed() {
+                Log.d("ads log", "테스트 배너 광고를 닫았습니다.")
+            }
+        }
+    }
+
+
 
     private fun setFab() {
         binding.fab.setOnClickListener {

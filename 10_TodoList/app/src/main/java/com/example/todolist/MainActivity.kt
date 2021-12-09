@@ -59,6 +59,9 @@ class MainActivity : AppCompatActivity(), OnItemLongClickListener { // ❶
         getAllTodoList()
     }
 
+    /**
+     * OnItemLongClickListener 인터페이스 구현부
+     * */
     override fun onLongClick(position: Int) {
         val builder: AlertDialog.Builder = AlertDialog.Builder(this)
         builder.setTitle("할 일 삭제")

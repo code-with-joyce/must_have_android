@@ -133,6 +133,17 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-6454769716136341/9262475525">
+    </com.google.android.gms.ads.AdView>
+
+    <com.google.android.gms.ads.AdView
+        android:visibility="gone"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/testAdView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        ads:adSize="BANNER"
         ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
     </com.google.android.gms.ads.AdView>
 
