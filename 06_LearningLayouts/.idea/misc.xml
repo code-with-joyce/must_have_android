@@ -7,7 +7,11 @@
         <entry key="app/src/main/res/layout/constraint_layout_2.xml" value="0.1638888888888889" />
         <entry key="app/src/main/res/layout/constraint_layout_3.xml" value="0.1638888888888889" />
         <entry key="app/src/main/res/layout/linear_layout_1.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/linear_layout_2.xml" value="0.1638888888888889" />
         <entry key="app/src/main/res/layout/linear_layout_3.xml" value="0.1638888888888889" />
+        <entry key="app/src/main/res/layout/linear_layout_4.xml" value="0.1638888888888889" />
+        <entry key="app/src/main/res/layout/relative_layout_1.xml" value="0.1638888888888889" />
+        <entry key="app/src/main/res/layout/relative_layout_2.xml" value="0.1638888888888889" />
       </map>
     </option>
   </component>

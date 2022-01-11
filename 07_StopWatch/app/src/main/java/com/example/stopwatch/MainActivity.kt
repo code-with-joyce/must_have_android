@@ -16,11 +16,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     var timer : Timer? = null		// ❶ timer 변수 생성
     var time = 0			// ❷ time 변수 생성
 
-            private lateinit var btn_start: Button
+    private lateinit var btn_start: Button
     private lateinit var btn_refresh: Button
     private lateinit var tv_millisecond: TextView
     private lateinit var tv_second: TextView
     private lateinit var tv_minute: TextView
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
